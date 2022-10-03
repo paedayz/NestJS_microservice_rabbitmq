@@ -13,7 +13,7 @@ import { ProductService } from './product.service';
           name: 'PRODUCT_SERVICE',
           transport: Transport.RMQ,
           options: {
-            urls: ['amqps://andpxmjj:1JlRaJDsJvcEyGg-X5I2_mRmqRrksy5t@jackal.rmq.cloudamqp.com/andpxmjj'],
+            urls: [process.env.AMQP_URL],
             queue: 'main_queue',
             queueOptions: {
               durable: false
